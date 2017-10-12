@@ -62,3 +62,26 @@ def clever_find(fishes)
   end
   biggest_fish
 end
+# tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
+
+def slow_dance(dir_str, tiles)
+  tiles.each_with_index do |e,i|
+    return i if e == dir_str
+  end
+  nil
+end
+
+tiles_hash = {
+"up" => 1,
+"right-up" => 2,
+"right" => 3,
+"right-down" => 4,
+"down" => 5,
+"left-down" => 6,
+"left" => 7,
+"left-up" => 8
+}
+
+def fast_dance(dir_str, tiles_hash)
+  return tiles_hash[dir_str]
+end
